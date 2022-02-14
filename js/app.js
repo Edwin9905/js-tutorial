@@ -24,10 +24,10 @@ if (savedUsername === null) {
     //show the form
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener("submit", onLoginBtnClick);
-    console.log(username);
+    //console.log(username);
 } else {
     //show the h1
     //localStorage.removeItem(USERNAME_KEY);
-    paintgreeting(username);
-
+    paintgreeting(savedUsername);
+    localStorage.removeItem(USERNAME_KEY);
 }
